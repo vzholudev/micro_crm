@@ -1,3 +1,201 @@
 // Place all the styles related to the Customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the profile controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.template {
+	display: none !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dialog-overlay {
+	display: block;
+	background-color: rgba(51, 51, 51, 0.2);
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: opacity 200ms ease-out;
+}
+
+.dialog-frame {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	background-color: #E1DBCF;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: block;
+	border: 2px solid #8F8673;
+	box-shadow: 0 0 90px -25px black;
+}
+
+.dialog-btn-close {
+	text-align: center;
+	float: right;
+	margin: 3px;
+	width: 19px;
+	height: 19px;
+	border: 1px solid gray;
+	cursor: pointer;
+}
+.dialog-btn-close:hover{
+	border-color: blue;
+}
+.dialog-btn-close:active{
+	padding: 1px 0 0 1px;
+	height: 18px;
+	width: 18px;
+}
+
+
+.dialog-title {
+	cursor: default;
+	border-bottom: 1px solid #8F8673;
+	padding: 2px 4px 5px 4px;
+	display: block;
+	background: #E0CC82;
+	color: #5D3200;
+	font-weight: bold;
+	font-size: 14px;	
+}
+
+.dialog-content {	
+	display: block;
+	/*background: white;*/
+	color: black;
+}
+
+.form-reservation {
+	width: 450px;
+	padding: 10px;
+}
+
+.form-reservation button.bt-reserve:active {
+	box-shadow: none;
+}
+
+.separator {
+	width: 1px;
+	height: 31px;
+	background-color: rgba(224, 204, 130, 1.0);
+	margin: 6px 0 0px 0;
+}
+
+
+#rooms {
+	color: white;
+	display: block;
+
+	min-height: 100%;
+}
+
+#room_content {
+	display: block;
+	/*height: 400px;*/
+	/*overflow: hidden;*/
+        margin: 0 auto;
+        width: 893px;
+	border: 1px solid white;
+	background: rgba(224, 204, 130, 0.89) none repeat scroll 0% 0%
+}
+
+#room_content > .reserv-row {
+	display: table;
+	width: calc(100% - 10px);
+	background: white;
+	color: #77591B;
+	margin: 0px 5px 0px 5px;
+	position: relative;
+}
+#room_content > .reserv-row.holiday {
+	background-color: #FFFAEF;
+	color: #A40000;
+        
+}
+
+#room_content > .reserv-row:first-child {
+	/*border-radius: 4px 4px 0 0;*/
+	margin-top: 5px;
+}
+#room_content > .reserv-row:last-child {
+	/*border-radius: 0 0 4px 4px;*/
+	margin-bottom: 5px;
+}
+#room_content > .reserv-row:not(first-child) {
+margin-top: 1px;
+}
+
+#room_content .reserv-item {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 70px;
+	padding: 4px 0 4px 0;
+	background-color: white;
+	overflow: hidden;	
+}
+
+#room_content .reserv-item:hover:not(.reserved):not(.locked) {
+	background-color: #FFFAEF;
+	cursor: pointer;
+}
+#room_content > .reserv-row > .title {
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+#room_content > .reserv-row .day {
+	font-size: 13px;
+	font-weight: bold;
+}
+#room_content > .reserv-row .date {
+	font-size: 11px;
+	opacity: 0.65;
+}
+
+#room_content .reserv-item [name='time'] {
+	font-size: 12px;
+	font-weight: bold;
+}
+#room_content .reserv-item [name='price'] {
+	font-size: 11px;
+}
+
+#room_content .reserv-item.locked {
+	background-color: #EEEEEE;
+	color: #A0A0A0;
+	cursor: default !important;
+}
+
+#room_content .reserv-item div {
+	display: block;
+}
+
+#room_content  .reserved {
+	background-color: #F6F6F6;
+	color: #C9C9C9;
+	cursor: default;
+}
+
+#room_content .reserved:hover:not(.locked) {
+border-color: #FFC1C1;
+}
+
+

@@ -1,8 +1,30 @@
+<script>
+  $(function() {
+    $('div#reserv_test').click(function() {
+      <%#*alert("sdf");%>
+      $.get('customers/new', function(data) {
+        //if (data.status === 'ok') {
+          $('div#price').hide('slow');
+       // }
+     });
+    });
+  });
+</script>
 <div class="container">
  
   <h2>Customers</h2>
   <div class="well">
     <%= link_to "New Customer", new_customer_path, remote: true, class: "btn btn-primary" %>
+  </div>
+    <div class="well">
+        <div id="room_content">
+        <div name="reserv_row">
+              <div id="reserv_test" name="reserv_item" class='reserv-item'>
+                  <div name="time"> 10:00 </div>
+                  <div id="price" name="price">250 грн</div>
+              </div>
+        </div>
+        </div>
   </div>
   <div class="new-customer"></div>
  
