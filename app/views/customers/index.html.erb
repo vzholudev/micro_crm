@@ -10,6 +10,20 @@
     });
   });
 </script>
+
+<script>
+  $(function() {
+    $('.reserv-item').click(function() {
+
+      $.ajax({
+        url: "some/url",
+        method: 'post',
+        data: {time: $(this).attr('data-time'), date: $(this).attr('data-date')}
+      });
+
+    });
+  });
+</script>
 <div class="container">
  
   <h2>Customers</h2>
